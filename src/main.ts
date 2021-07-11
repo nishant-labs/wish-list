@@ -1,6 +1,10 @@
-import { createApp } from "vue";
-import App from "./App.vue";
-import "./registerServiceWorker";
-import store from "./store";
+import { createApp } from 'vue';
+import WishList from './WishList.vue';
+import './registerServiceWorker';
+import store from './store';
 
-createApp(App).use(store).mount("#app");
+// Import Bootstrap an Bootstrap Icon CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+createApp(WishList).use(store).mount('#app');

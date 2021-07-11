@@ -1,0 +1,42 @@
+<div
+	class="card"
+	:class="[
+			hasShadow && 'shadow',
+			isRowCard ? 'd-flex flex-row' : 'col',
+		]"
+>
+	<img
+		v-if="image"
+		v-bind:src="imageSrc"
+		class="card-img-top"
+		height="150"
+		alt="..."
+	/>
+	<div class="card-body">
+		<h5 class="card-title">{{ title }}</h5>
+		<p class="card-text">{{ description }}</p>
+	</div>
+
+	<ul class="list-group list-group-flush border-start w-100">
+		<li
+			v-for="wishDetail in wishDetailList"
+			class="list-group-item p-2 d-flex justify-content-between"
+		>
+			<strong class="m-0">{{ wishDetail.type }}</strong>
+			<p class="m-0">{{ wishDetail.value }}</p>
+		</li>
+	</ul>
+
+	<div
+		v-if="hasFooter"
+		class="card-footer d-flex justify-content-between"
+		:class="[
+			isRowCard && 'flex-column',
+		]"
+	>
+		<!-- <button type="button" class="btn btn-link btn-sm">Prioritize</button> -->
+		<button type="button" class="btn p-0"><h3 class="bi bi-arrow-up-square"></h3></button>
+		<button type="button" class="btn p-0 text-decoration-none"><i class="bi bi-arrow-down-square"></i></button>
+		<!-- <button type="button" class="btn btn-link btn-sm">Deprioritized</button> -->
+	</div>
+</div>
