@@ -5,6 +5,7 @@ import store from './store';
 
 // Import Bootstrap an Bootstrap Icon CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 createApp(WishList).use(store).mount('#app');

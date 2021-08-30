@@ -17,7 +17,12 @@
 		<p class="card-text">{{ description }}</p>
 	</div>
 
-	<ul class="list-group list-group-flush border-start w-100">
+	<ul
+		class="list-group list-group-flush"
+		:class="[
+			isRowCard && 'border-start w-100',
+		]"
+	>
 		<li
 			v-for="wishDetail in wishDetailList"
 			class="list-group-item p-2 d-flex justify-content-between"
@@ -35,8 +40,8 @@
 		]"
 	>
 		<!-- <button type="button" class="btn btn-link btn-sm">Prioritize</button> -->
-		<button type="button" class="btn p-0"><h3 class="bi bi-arrow-up-square"></h3></button>
-		<button type="button" class="btn p-0 text-decoration-none"><i class="bi bi-arrow-down-square"></i></button>
+		<button type="button" class="bi bi-arrow-up-square"></button>
+		<button type="button" class="bi bi-arrow-down-square"></button>
 		<!-- <button type="button" class="btn btn-link btn-sm">Deprioritized</button> -->
 	</div>
 </div>

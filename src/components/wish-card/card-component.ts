@@ -18,8 +18,8 @@ export default class WishCard extends Vue {
   title!: string;
   description!: string;
   wishDetailList: Array<{ type: string; value: string }> = [
-    { type: 'price', value: '£100' },
-    { type: 'date added', value: '234 546 645' },
+    { type: 'Budget', value: '£100' },
+    { type: 'Modified', value: '234 546 645' },
   ];
   get imageSrc(): string {
     return this.image ? require(`../../assets/${this.image}`) : undefined;
